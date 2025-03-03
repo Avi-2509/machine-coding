@@ -21,7 +21,6 @@ public class SplitwiseV2Application {
 
 	public static void main(String[] args) throws JsonProcessingException {
 
-		ObjectMapper objectMapper = new ObjectMapper();
 		Map<String, Map<String, Double>> expenseMap = new HashMap<>();
 		createUser();
 		String filePath = "/Users/avisrivastava/Desktop/Personal/Machine-coding-practice/src/main/java/com/machine_coding/Machine/coding/practice/lldQuestions/splitwiseV2/input.txt";

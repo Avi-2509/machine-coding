@@ -3,6 +3,7 @@ package com.machine_coding.Machine.coding.practice.lldQuestions.parkingLot;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.machine_coding.Machine.coding.practice.lldQuestions.parkingLot.enums.VehicleTypeEnum;
 import com.machine_coding.Machine.coding.practice.lldQuestions.parkingLot.model.*;
+import com.machine_coding.Machine.coding.practice.lldQuestions.parkingLot.services.ParkingAllotmentServiceImpl;
 import com.machine_coding.Machine.coding.practice.lldQuestions.parkingLot.services.ParkingLotService;
 import com.machine_coding.Machine.coding.practice.lldQuestions.parkingLot.services.SlotService;
 import com.machine_coding.Machine.coding.practice.lldQuestions.parkingLot.services.inter.IParkingAllotmentService;
@@ -20,7 +21,7 @@ public class ParkingLotApplication {
 
 		SlotService slotService = new SlotService();
 		IParkingAllotmentServiceFactory iParkingAllotmentServiceFactory = new IParkingAllotmentServiceFactory();
-		IParkingAllotmentService parkingAllotmentService = iParkingAllotmentServiceFactory.getIParkingAllotmentService("Generic");
+		IParkingAllotmentService parkingAllotmentService = new ParkingAllotmentServiceImpl();
 
 		while(true){
 			String input = scanner.nextLine();
